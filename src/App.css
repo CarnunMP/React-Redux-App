@@ -48,6 +48,9 @@
   justify-content: center;
   align-items: center;
 }
+.randomise-button button:hover {
+  cursor: pointer;
+}
 .App {
   width: 100vw;
   height: 100vh;
