@@ -13,7 +13,11 @@ export function decrementCount() {
 export const randomiseQuote = () => dispatch => {
     axios.get("https://api.kanye.rest")
         .then(res => {
-            const quote = res.data.quote;
+            let quote = res.data.quote;
+            if (quote[quote.length - 1] !== ".") {
+                quote += ".";
+            }
+
             dispatch({
                 type: types.RANDOMISE_QUOTE,
                 payload: quote,
