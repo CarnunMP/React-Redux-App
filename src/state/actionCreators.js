@@ -1,4 +1,5 @@
 import * as types from "./actionTypes";
+import axios from "axios";
 
 // Counter test:
 export function incrementCount() {
@@ -9,6 +10,16 @@ export function decrementCount() {
 }
 
 // App proper:
-export function randomiseQuote() {
-    return { type: types.RANDOMISE_QUOTE };
+export const randomiseQuote = () => dispatch => {
+    axios.get("https://api.kanye.rest")
+        .then(res => {
+            const quote = res.data.quote;
+            dispatch({
+                type: types.RANDOMISE_QUOTE,
+                payload: quote,
+            })
+        })
+        .catch(err => {
+            alert(err);
+        })
 }

@@ -17,6 +17,8 @@ export function countReducer(count = initialCount, action) {
 const initialQuote = "I give up drinking every week.";
 export function quoteReducer(quote = initialQuote, action) {
     switch (action.type) {
+        case types.RANDOMISE_QUOTE:
+            return action.payload;
         default:
             return quote;
     }

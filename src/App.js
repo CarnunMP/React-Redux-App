@@ -1,12 +1,14 @@
 import React from 'react';
 import "./App.css";
-import { combineReducers, createStore, compose } from "redux"
+import { combineReducers, createStore, compose, applyMiddleware } from "redux"
 import { Provider } from "react-redux";
 import * as reducers from "./state/reducers";
+import thunk from "redux-thunk";
 
 // Counter test:
 import Counter from './components/Counter';
 import QuoteBox from './components/QuoteBox';
+import RandomiseButton from './components/RandomiseButton';
 
 const rootReducer = combineReducers({
   count: reducers.countReducer,
@@ -17,6 +19,7 @@ const store = createStore(
   rootReducer,
   {},
   compose(
+    applyMiddleware(thunk),
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
   )
 );
@@ -27,6 +30,7 @@ export default function App() {
       <div className="App">
         {/* <Counter /> */}
         <QuoteBox />
+        <RandomiseButton />
       </div>
     </Provider>
   );
