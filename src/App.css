@@ -1,3 +1,57 @@
-* {
-  text-align: center;
+.quote-box {
+  position: relative;
+  background: #ececec;
+  border: 5px solid pink;
+  border-radius: 10px;
+  padding: 1rem;
+  margin: 2.5rem 5rem 5rem 2rem;
+  overflow: wrap;
+  max-width: 60%;
+}
+.quote-box p {
+  font-size: 3rem;
+}
+.randomise-button {
+  position: relative;
+  right: 5rem;
+}
+.randomise-button button {
+  border: 3px solid pink;
+  font-size: 2rem;
+  border-radius: 5px;
+  padding: 0.3rem 0.8rem 0.5rem 1rem;
+  background: #ececec;
+  font-family: 'Oswald', sans-serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.App {
+  width: 100vw;
+  height: 100vh;
+  background: #161616;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+  overflow: hidden;
+  font-family: 'Oswald', sans-serif;
+  position: relative;
+}
+.kanye-image {
+  width: 40rem;
+  display: flex;
+  flex-direction: null;
+  justify-content: center;
+  align-items: center;
+  align-self: flex-start;
+  position: absolute;
+  left: -6rem;
+  bottom: -5rem;
+  transform: rotate(25deg);
+}
+.kanye-image img {
+  width: 100%;
+  height: 100%;
 }

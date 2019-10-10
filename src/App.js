@@ -4,6 +4,7 @@ import { combineReducers, createStore, compose, applyMiddleware } from "redux"
 import { Provider } from "react-redux";
 import * as reducers from "./state/reducers";
 import thunk from "redux-thunk";
+import Kanye from "./images/kanye.png";
 
 // Counter test:
 import Counter from './components/Counter';
@@ -31,6 +32,9 @@ export default function App() {
         {/* <Counter /> */}
         <QuoteBox />
         <RandomiseButton />
+        <div className="kanye-image">
+          <img src={Kanye} alt="kanye thinking" />
+        </div>
       </div>
     </Provider>
   );

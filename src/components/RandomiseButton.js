@@ -7,7 +7,7 @@ export function RandomiseButton(props) {
 
     return (
         <div className="randomise-button">
-            <button onClick={randomiseQuote}>Randomise</button>
+            <button onClick={randomiseQuote}>Random ⟳</button>
         </div>
     )
 }
