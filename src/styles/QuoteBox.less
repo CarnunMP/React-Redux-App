@@ -1,14 +1,35 @@
-.quote-box {
+.quote-box-and-triangle {
     position: relative;
     background: rgb(236, 236, 236);
     border: 5px solid pink;
     border-radius: 10px;
-    padding: 1rem;
+    padding: 2rem;
     margin: 2.5rem 5rem 5rem 2rem;
     overflow: wrap;
-    max-width: 60%;
+    width: 65%;
+    height: 30%;
 
-    p {
-        font-size: 3rem;
+    .quote-box {
+        width: 100%;
+        height: 100%;
+        .flex(row, center, center);
+
+        p {
+            font-size: 3rem;
+            line-height: 4rem;
+        }
+    }
+
+    .triangle {
+        height: 0;
+        width: 0;
+        border-top: 5rem solid transparent;
+        border-bottom: 5rem solid transparent;
+        border-left: 4rem solid @off-white;
+        transform: rotate(20deg);
+    
+        position: absolute;
+        left: -2%;
+        bottom: -20%;
     }
 }

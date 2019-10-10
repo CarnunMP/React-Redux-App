@@ -6,9 +6,14 @@ export function QuoteBox(props) {
     const { quote } = props;
 
     return (
-        <div className="quote-box">
-            <p>{quote}</p>
-        </div>
+        <>
+            <div className="quote-box-and-triangle">
+                <div className="quote-box">
+                    <p>{quote}</p>
+                </div>
+                <div className="triangle" />
+            </div>
+        </>
     )
 }
 

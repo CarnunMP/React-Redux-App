@@ -14,8 +14,11 @@ export const randomiseQuote = () => dispatch => {
     axios.get("https://api.kanye.rest")
         .then(res => {
             let quote = res.data.quote;
-            if (quote[quote.length - 1] !== ".") {
-                quote += ".";
+            const lastCharacter = quote[quote.length - 1];
+            if (lastCharacter !== "." && lastCharacter !== "!" && lastCharacter !== "?") {
+                quote = `“` + quote + `.”`;
+            } else {
+                quote = `“` + quote + `”`;
             }
 
             dispatch({

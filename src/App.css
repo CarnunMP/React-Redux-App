@@ -1,19 +1,40 @@
-.quote-box {
+.quote-box-and-triangle {
   position: relative;
   background: #ececec;
   border: 5px solid pink;
   border-radius: 10px;
-  padding: 1rem;
+  padding: 2rem;
   margin: 2.5rem 5rem 5rem 2rem;
   overflow: wrap;
-  max-width: 60%;
+  width: 65%;
+  height: 30%;
 }
-.quote-box p {
+.quote-box-and-triangle .quote-box {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.quote-box-and-triangle .quote-box p {
   font-size: 3rem;
+  line-height: 4rem;
+}
+.quote-box-and-triangle .triangle {
+  height: 0;
+  width: 0;
+  border-top: 5rem solid transparent;
+  border-bottom: 5rem solid transparent;
+  border-left: 4rem solid #ececec;
+  transform: rotate(20deg);
+  position: absolute;
+  left: -2%;
+  bottom: -20%;
 }
 .randomise-button {
   position: relative;
-  right: 5rem;
+  right: 8rem;
 }
 .randomise-button button {
   border: 3px solid pink;
