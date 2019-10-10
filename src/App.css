@@ -1,0 +1,81 @@
+.quote-box-and-triangle {
+  position: relative;
+  background: #ececec;
+  border: 5px solid pink;
+  border-radius: 10px;
+  padding: 2rem;
+  margin: 2.5rem 5rem 5rem 2rem;
+  overflow: wrap;
+  width: 65%;
+  height: 30%;
+}
+.quote-box-and-triangle .quote-box {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.quote-box-and-triangle .quote-box p {
+  font-size: 3rem;
+  line-height: 4rem;
+}
+.quote-box-and-triangle .triangle {
+  height: 0;
+  width: 0;
+  border-top: 5rem solid transparent;
+  border-bottom: 5rem solid transparent;
+  border-left: 4rem solid #ececec;
+  transform: rotate(20deg);
+  position: absolute;
+  left: -2%;
+  bottom: -20%;
+}
+.randomise-button {
+  position: relative;
+  right: 8rem;
+}
+.randomise-button button {
+  border: 3px solid pink;
+  font-size: 2rem;
+  border-radius: 5px;
+  padding: 0.3rem 0.8rem 0.5rem 1rem;
+  background: #ececec;
+  font-family: 'Oswald', sans-serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.randomise-button button:hover {
+  cursor: pointer;
+}
+.App {
+  width: 100vw;
+  height: 100vh;
+  background: #161616;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+  overflow: hidden;
+  font-family: 'Oswald', sans-serif;
+  position: relative;
+}
+.kanye-image {
+  width: 40rem;
+  display: flex;
+  flex-direction: null;
+  justify-content: center;
+  align-items: center;
+  align-self: flex-start;
+  position: absolute;
+  left: -6rem;
+  bottom: -5rem;
+  transform: rotate(25deg);
+}
+.kanye-image img {
+  width: 100%;
+  height: 100%;
+}
