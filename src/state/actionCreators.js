@@ -7,3 +7,8 @@ export function incrementCount() {
 export function decrementCount() {
     return { type: types.DECREMENT_COUNT };
 }
+
+// App proper:
+export function randomiseQuote() {
+    return { type: types.RANDOMISE_QUOTE };
+}

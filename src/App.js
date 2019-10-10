@@ -6,9 +6,11 @@ import * as reducers from "./state/reducers";
 
 // Counter test:
 import Counter from './components/Counter';
+import QuoteBox from './components/QuoteBox';
 
 const rootReducer = combineReducers({
   count: reducers.countReducer,
+  quote: reducers.quoteReducer,
 });
 
 const store = createStore(
@@ -23,7 +25,8 @@ export default function App() {
   return (
     <Provider store={store}>
       <div className="App">
-        <Counter />
+        {/* <Counter /> */}
+        <QuoteBox />
       </div>
     </Provider>
   );

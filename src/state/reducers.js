@@ -12,3 +12,12 @@ export function countReducer(count = initialCount, action) {
             return count;
     }
 }
+
+// App proper:
+const initialQuote = "I give up drinking every week.";
+export function quoteReducer(quote = initialQuote, action) {
+    switch (action.type) {
+        default:
+            return quote;
+    }
+}
